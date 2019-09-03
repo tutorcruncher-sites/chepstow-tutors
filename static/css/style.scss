@@ -5,6 +5,8 @@ $primary: #016997;
 $charcoal: #42494E;
 $jade: #2C7B82;
 $gold: #CDB370;
+$grey: #E6E2D6;
+$turquoise: #72B399;
 
 $font-family: Lato, sans-serif;
 
@@ -22,6 +24,7 @@ p, li {
   &.small {
     font-size: 16px;
   }
+  font-weight: 300;
 }
 
 li {
@@ -30,21 +33,27 @@ li {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Montserrat, sans-serif;
-  font-weight: 500;
+  font-weight: 700 !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 h1, h2 {
-  font-weight: 700;
   color: $jade;
+  font-size: 2rem;
 }
 
 h3 {
   color: $gold;
 }
 
+hr {
+  border-color: $gold;
+}
+
 .container {
   @media (min-width: 1140px) {
-    max-width: 1400px;
+    max-width: 1600px;
   }
 }
 
@@ -81,6 +90,7 @@ header {
       letter-spacing: 3px;
       padding-top: 0;
       padding-bottom: 0;
+      font-weight: 500;
     }
     & + .nav-item {
       border-left: 2px solid $gold;
@@ -91,24 +101,34 @@ header {
 }
 
 #about {
+  padding-top: 40px;
+  .who-we-are {
+    font-size: 24px;
+  }
   > div {
     justify-content: center;
   }
   .info-col {
-    width: 300px;
-    margin: 40px;
-  }
-  .img-wrapper {
-    height: 200px;
-    img {
-      max-height: 150px;
-      max-width: 100%;
-      margin: 20px auto;
-      display: block;
+    width: 33%;
+    margin: 40px 0;
+    .img-wrapper {
+      height: 200px;
+      img {
+        max-height: 150px;
+        max-width: 100%;
+        margin: 20px auto;
+        display: block;
+      }
     }
-  }
-  h2, h3 {
-    text-transform: uppercase;
+    p {
+      margin: 0 auto;
+      max-width: 70%;
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+    hr {
+      width: 50px;
+    }
   }
 }
 
@@ -130,43 +150,39 @@ header {
 // Footer
 
 footer {
+  padding-top: 50px;
+  margin-top: 50px;
+  background-color: $grey;
   h3 {
     margin-bottom: 30px;
-  }
-  .footer-above {
-    padding-top: 50px;
   }
   .footer-col {
     text-align: left;
     margin-bottom: 50px;
     a {
-      color: white;
       text-decoration: none;
       font-size: 24px;
-    }
-  }
-  .footer-below {
-    padding: 0 0 25px 0;
-    color: white;
-  }
-  @media (max-width: 767px) {
-    .footer-above {
-      padding: 0;
-      .footer-col {
-        p, a {
-          font-size: 16px;
-        }
-        h3 {
-          font-size: 18px;
-        }
+      color: $charcoal;
+      border-color: $charcoal;
+      transition: .5s;
+      .fa-fw {
+        padding-top: 11px;
+      }
+      &:hover {
+        background-color: $charcoal;
+        color: $grey;
       }
     }
   }
-}
-
-a {
-  outline: 0;
-  &:hover, &:focus, &:active, &.active {
-    outline: 0;
+  @media (max-width: 767px) {
+    padding: 0;
+    .footer-col {
+      p, a {
+        font-size: 16px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+    }
   }
 }
