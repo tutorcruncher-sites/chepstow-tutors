@@ -1,6 +1,49 @@
 ---
 layout: base
+blocks:
+  -
+    pic: 'laptop.png'
+    title: 'Lemon Squeezy'
+    desc: |
+      This defines the ability for a flex item to grow if necessary. It accepts a 
+      unitless value that serves as a proportion. It dictates what amount of the 
+      available space inside the flex container the item should take up.
+    title_alt: 'For Tutors'
+  - 
+    pic: 'plant.png'
+    title: "Bloomin' Marvellous"
+    desc: |
+      This defines the ability for a flex item to grow if necessary. It accepts a 
+      unitless value that serves as a proportion. It dictates what amount of the 
+      available space inside the flex container the item should take up.
+    title_alt: 'For Students'
+  -
+    pic: 'rocket.png'
+    title: 'Aim high'
+    desc: |
+      This defines the ability for a flex item to grow if necessary. It accepts a 
+      unitless value that serves as a proportion. It dictates what amount of the 
+      available space inside the flex container the item should take up.
+    title_alt: 'For Business'
 ---
-{% include header.html %}
-{% include about.html %}
-{% include our-tutors.html %}
+<!-- Header -->
+<header>
+  <div class="hero"></div>
+</header>
+<!-- About Section -->
+<section class="primary-light" id="about">
+  <div class="container d-flex">
+    {% for block in page.blocks %}
+      <div class="info-col">
+        <div class="img-wrapper">
+          <img src="/static/img/{{ block.pic }}"/>
+        </div>
+        <h2>{{ block.title }}</h2>
+        <hr>
+        <p>{{ block.desc }}</p>
+        <h3>{{ block.title_alt }}</h3>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+

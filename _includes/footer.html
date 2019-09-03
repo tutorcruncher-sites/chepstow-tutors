@@ -50,7 +50,7 @@
   </a>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.tutorcruncher.com/socket/latest/socket.js"></script>
 {% if site.ga_analytics_key %}
   <script>
@@ -63,27 +63,3 @@
     ga('send', 'pageview');
   </script>
 {% endif %}
-{% if site.socket_key %}
-  <script src="{{ page.socket_url }}"></script>
-  <script>
-    socket('{{ site.socket_key }}', {
-      mode: 'enquiry-modal',
-      element: '#socket-enquiry-modal',
-      router_mode: 'history'
-    })
-  </script>
-  <script>
-    socket('{{ site.socket_key }}', {
-      router_mode: 'history'
-    })
-  </script>
-{% endif %}
-<script>
-  {% if page.url =='/' %}
-    $('.navbar-default').affix({
-      offset: {
-        top: 200
-      }
-    })
-  {% endif %}
-</script>
