@@ -1,14 +1,6 @@
 ---
 layout: base
 blocks:
-  -
-    pic: 'laptop.png'
-    title: 'Lemon Squeezy'
-    desc: |
-      This defines the ability for a flex item to grow if necessary. It accepts a 
-      unitless value that serves as a proportion. It dictates what amount of the 
-      available space inside the flex container the item should take up.
-    title_alt: 'For Tutors'
   - 
     pic: 'plant.png'
     title: "Bloomin' Marvellous"
@@ -17,6 +9,14 @@ blocks:
       unitless value that serves as a proportion. It dictates what amount of the 
       available space inside the flex container the item should take up.
     title_alt: 'For Students'
+  -
+    pic: 'laptop.png'
+    title: 'Lemon Squeezy'
+    desc: |
+      This defines the ability for a flex item to grow if necessary. It accepts a 
+      unitless value that serves as a proportion. It dictates what amount of the 
+      available space inside the flex container the item should take up.
+    title_alt: 'For Tutors'
   -
     pic: 'rocket.png'
     title: 'Aim high'
@@ -38,7 +38,7 @@ blocks:
       At Chepstow Tutors we are dedicated to creating an internationally-minded community of happy, passionate and 
       aspirational learners. Through a caring, individualised approach we develop curiosity, creativity and excellence.
     </p>
-    <div class="d-flex">
+    <div class="d-md-flex d-sm-block">
       {% for block in page.blocks %}
         <div class="info-col text-center">
           <div class="img-wrapper">
@@ -51,5 +51,12 @@ blocks:
         </div>
       {% endfor %}
     </div>
+  </div>
+</section>
+
+<!-- Contact form -->
+<section id="about">
+  <div class="container">
+    <div id="enquiry" class="text-center"></div>
   </div>
 </section>

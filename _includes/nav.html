@@ -3,7 +3,13 @@
   <a class="navbar-brand" href="{% if page.url == '/' %}#{% else %}/{% endif %}">
     <img id="navbar-logo" src="/static/img/logo.png"/>
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+
+  <div class="collapse navbar-collapse" id="navbar">
+    <h2 class="ml-auto coming-soon">Coming soon...</h2>
+  </div>
+  <!-- While we don't have a menu
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -19,5 +25,5 @@
         <a class="nav-link" href="#">For business</a>
       </li>
     </ul>
-  </div>
+  </div> -->
 </nav>
