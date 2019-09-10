@@ -1,11 +1,17 @@
 <!-- Navigation -->
+
 <nav class="navbar navbar-light navbar-expand-md bg-light affix">
   <a class="navbar-brand" href="{% if page.url == '/' %}#{% else %}/{% endif %}">
     <img id="navbar-logo" src="/static/img/logo.png"/>
   </a>
 
-  <div class="collapse navbar-collapse" id="navbar">
-    <h2 class="ml-auto coming-soon">Coming soon...</h2>
+  <div class="nav-left-items d-none d-md-block ml-auto text-right">
+    <span class="mb-auto">
+      <a href="tel:{{ site.phone }}">T: {{ site.phone }}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:{{ site.email }}">E: {{ site.email }}</a>
+    </span>
+    <h2 class="coming-soon mt-auto text-right">
+      Make a Student Enquiry or Apply to Join our Tutor Team below
+    </h2>
   </div>
   <!-- While we don't have a menu
 

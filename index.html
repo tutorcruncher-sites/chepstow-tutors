@@ -1,30 +1,24 @@
 ---
 layout: base
 blocks:
-  - 
-    pic: 'plant.png'
-    title: "Bloomin' Marvellous"
-    desc: |
-      This defines the ability for a flex item to grow if necessary. It accepts a 
-      unitless value that serves as a proportion. It dictates what amount of the 
-      available space inside the flex container the item should take up.
-    title_alt: 'For Students'
-  -
-    pic: 'laptop.png'
-    title: 'Lemon Squeezy'
-    desc: |
-      This defines the ability for a flex item to grow if necessary. It accepts a 
-      unitless value that serves as a proportion. It dictates what amount of the 
-      available space inside the flex container the item should take up.
-    title_alt: 'For Tutors'
   -
     pic: 'rocket.png'
     title: 'Aim high'
     desc: |
-      This defines the ability for a flex item to grow if necessary. It accepts a 
-      unitless value that serves as a proportion. It dictates what amount of the 
-      available space inside the flex container the item should take up.
-    title_alt: 'For Business'
+      Our Team has years of experience matching students from around the 
+      world with the right tutor to maximise each student’s full potential.
+  - 
+    pic: 'plant.png'
+    title: "Bloomin' Marvellous"
+    desc: |
+      We understand the value of relationship-based, personalised learning. 
+      The student who is engaged and inspired by their tutor wants to learn and grow.
+  -
+    pic: 'laptop.png'
+    title: 'Lemon Squeezy'
+    desc: |
+      We are curating a first-class team of London-based tutors. We are recruiting specialist 
+      tutors in all subjects from Key Stage 1 to undergraduate.
 ---
 <!-- Header -->
 <header>
@@ -35,8 +29,9 @@ blocks:
 <section id="about">
   <div class="container">
     <p class="who-we-are text-center">
-      At Chepstow Tutors we are dedicated to creating an internationally-minded community of happy, passionate and 
-      aspirational learners. Through a caring, individualised approach we develop curiosity, creativity and excellence.
+      At Chepstow Tutors we are dedicated to creating an internationally-minded community of happy, 
+      passionate and aspirational learners. We develop curiosity, creativity and excellence through 
+      a bespoke, nurturing approach.
     </p>
     <div class="d-md-flex d-sm-block">
       {% for block in page.blocks %}
@@ -47,7 +42,9 @@ blocks:
           <h2>{{ block.title }}</h2>
           <hr>
           <p>{{ block.desc }}</p>
-          <h3>{{ block.title_alt }}</h3>
+          {% if forloop.last == true %}
+            <a class="btn btn-primary" target="_blank" href="{{ site.tutorcruncher_url }}/signup/tutor/">Apply to become a tutor</a>
+          {% endif %}
         </div>
       {% endfor %}
     </div>
@@ -55,8 +52,14 @@ blocks:
 </section>
 
 <!-- Contact form -->
-<section id="about">
+<section id="contact">
   <div class="container">
+    <h1 class="text-center">Student Enquiries</h2>
     <div id="enquiry" class="text-center"></div>
   </div>
 </section>
+
+<!-- Hero 2 -->
+<div id="hero-2" class="mt-4">
+  <div class="hero-2"></div>
+</div>

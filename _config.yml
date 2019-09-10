@@ -1,6 +1,6 @@
-title: Example Site
-email: info@fake.com
-description: Site Description
+title: Chepstow Tutors
+email: info@cheptsowtutors.com
+description: Make a Student Enquiry or Apply to Join our Tutor Team below
 baseurl: ''
 url: url
 meta_author: Tom Hamilton Stubber
@@ -15,12 +15,12 @@ exclude:
   - Gemfile.lock
 include:
   - _redirects
-footer:
-  copyright:
 address:
-  - Address Line 1
-  - Address Line 2
+  - Chepstow Tutors Ltd
+  - 20 North Audley Street
+  - London W1K 6WE
 phone: 1-555-444-444
+email: info@chepstowtutors.com
 social:
   - title: twitter
     url:
@@ -32,4 +32,4 @@ office_hours:
   - "Mon - Fri: 9am - 5pm"
   - "Weekends: Closed"
 socket_key: '9c79f14df986a1ec693c'
-tutorcruncher_url: https://secure.tutorcruncher.com/jarvislearning
+tutorcruncher_url: https://secure.tutorcruncher.com/chepstow-tutors
