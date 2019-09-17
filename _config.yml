@@ -18,7 +18,8 @@ include:
 address:
   - 20 North Audley Street
   - London W1K 6WE
-phone: 1-555-444-444
+phone: +442071291479
+phone_display: +44 (0) 20 7129 1479
 email: info@chepstowtutors.com
 social:
   - title: twitter
